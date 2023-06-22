@@ -1,0 +1,166 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 567.74456516497344,
+            "y": 0
+          },
+          "nodeIndex": "Country",
+          "size": {
+            "height": 197,
+            "width": 262
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 370.65942021996466,
+            "y": 452
+          },
+          "nodeIndex": "Sex",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 15.574275274955653,
+            "y": 477.5
+          },
+          "nodeIndex": "Year",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1466.6594202199647,
+            "y": 0
+          },
+          "nodeIndex": "Metrics",
+          "size": {
+            "height": 118,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 918.65942021996466,
+            "y": 40
+          },
+          "nodeIndex": "Variance Analysis",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 644.65942021996466,
+            "y": 261
+          },
+          "nodeIndex": "Flags",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 348.79689102143675,
+            "y": 610
+          },
+          "nodeIndex": "Years",
+          "size": {
+            "height": 213,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1192.6594202199647,
+            "y": 101
+          },
+          "nodeIndex": "Legend",
+          "size": {
+            "height": 213,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.00222085051,
+            "y": 610
+          },
+          "nodeIndex": "Population",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 289.57427527495565,
+            "y": 863
+          },
+          "nodeIndex": "Buckets",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 903.79689102143675,
+            "y": 402
+          },
+          "nodeIndex": "Extra Year",
+          "size": {
+            "height": 213,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Indicators",
+          "size": {
+            "height": 412,
+            "width": 354
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
