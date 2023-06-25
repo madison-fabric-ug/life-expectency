@@ -16609,14 +16609,8 @@
         "measures": [
           {
             "name": "Life Expectancy 2",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "expression": "ROUNDUP(AVERAGE(Indicators[Life expectancy (yrs)]),0)",
-            "formatString": "0",
+            "expression": "ROUNDUP(AVERAGE(Indicators[Life expectancy (yrs)]),2)",
+            "formatString": "0.00",
             "lineageTag": "9dc7d6fe-bd62-4441-9caa-f6f748f1d59a"
           },
           {
