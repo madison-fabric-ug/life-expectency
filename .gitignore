@@ -1,2 +1,8 @@
 **/.pbi/localSettings.json
-**/.pbi/cache.abf
+
+#
+# Note: We want the cached data in GitHub for this course.
+#
+#       Typically the cache.abf SHOULD NOT be added to Git.
+#
+# **/.pbi/cache.abf
