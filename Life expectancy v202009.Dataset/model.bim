@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.118.828.0 (23.06)"
+        "value": "2.121.942.0 (23.09)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -14595,551 +14595,6 @@
     "sourceQueryCulture": "en-US",
     "tables": [
       {
-        "name": "Buckets",
-        "annotations": [
-          {
-            "name": "PBI_QueryRelationships",
-            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Buckets/Changed Type.{Bucket,0}\",\"Section1/Buckets/Changed Type.{Category,1}\",\"Section1/Buckets/Changed Type.{Bucket Sort,2}\",\"Section1/Buckets/Changed Type.{Bucket_2,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Buckets/Changed Type.{Bucket,0}\",\"Section1/Buckets/Changed Type.{Category,1}\",\"Section1/Buckets/Changed Type.{Bucket Sort,2}\",\"Section1/Buckets/Changed Type.{Bucket_2,3}\"],\"RelationshipInfo\":[]}"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Bucket",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "323fe867-0e98-4228-b706-5e5d8e16b56f",
-            "sortByColumn": "Category",
-            "sourceColumn": "Bucket",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Bucket Sort",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "299eb679-e06b-43e3-90e8-4a30f0ef68f7",
-            "sourceColumn": "Bucket Sort",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Bucket_2",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "a4e19b8f-e5fc-4028-8729-bab1ca95e67e",
-            "sortByColumn": "Bucket Sort",
-            "sourceColumn": "Bucket_2",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Category",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "7aa7b563-8500-49fb-a454-41a21906d3bf",
-            "sourceColumn": "Category",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "898f55d7-9a76-43c9-8530-32862b68a953",
-        "partitions": [
-          {
-            "name": "Buckets-57fac719-6790-4d47-a1d4-17f80f110e7f",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"PctLDoAwCATQu7AuCVo+epbalfEI3l8okQUkzBvGgOsl6ncnaLDH2nwqm21AJ2T2MCulLEtZUE4P/fRKqeavEmqoxi+XWqoRWqiFSumRuo7nCFtL/0Jkc34=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Bucket = _t, Category = _t, #\"Bucket Sort\" = _t, Bucket_2 = _t]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Bucket\", type text}, {\"Category\", Int64.Type}, {\"Bucket Sort\", Int64.Type}, {\"Bucket_2\", type text}})",
-                "in",
-                "    #\"Changed Type\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Country",
-        "annotations": [
-          {
-            "name": "PBI_QueryRelationships",
-            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Country/Changed Type1.{Country,0}\",\"Section1/Country/Changed Type1.{Country Code,1}\",\"Section1/Country/Sheet1_Sheet.{Column3,2}\",\"Section1/Country/Sheet1_Sheet.{Column4,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Country/Changed Type1.{Country,0}\",\"Section1/Country/Changed Type1.{Country Code,1}\",\"Section1/Country/Sheet1_Sheet.{Column3,2}\",\"Section1/Country/Sheet1_Sheet.{Column4,3}\"],\"RelationshipInfo\":[]}"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Continent",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "2da14718-c6d6-4783-b81c-07e701670dfa",
-            "sourceColumn": "Continent",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Country",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "ea214a7b-a5ac-41aa-82ce-79d015f2f1cf",
-            "sourceColumn": "Country",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Country Code",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "8929e644-5c27-46d4-89e2-6d3a87f1db4b",
-            "sourceColumn": "Country Code",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Region",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "b398433a-64eb-4c8a-85cc-d6d4abd511ad",
-            "sourceColumn": "Region",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "World",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "expression": "\"Earth\"",
-            "isDataTypeInferred": true,
-            "lineageTag": "e504558c-7274-4715-9242-1b9425e31052",
-            "summarizeBy": "none",
-            "type": "calculated"
-          }
-        ],
-        "lineageTag": "74109f22-fea0-431e-b478-136e3acf05a0",
-        "partitions": [
-          {
-            "name": "Country-4f99a58d-cfd5-4495-ac82-4706c2bb285f",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Country.xlsx\"), null, true),",
-                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(Sheet1_Sheet,{{\"Column1\", type text}, {\"Column2\", type text}}),",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
-                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Country\", type text}, {\"Country Code\", type text}})",
-                "in",
-                "    #\"Changed Type1\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
-        "name": "DateTableTemplate_eee22f46-6610-45d5-b789-23d09a1c5849",
-        "annotations": [
-          {
-            "name": "__PBI_TemplateDateTable",
-            "value": "true"
-          },
-          {
-            "name": "DefaultItem",
-            "value": "DateHierarchy"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Date",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ],
-            "dataCategory": "PaddedDateTableDates",
-            "dataType": "dateTime",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "isNameInferred": true,
-            "lineageTag": "14f68590-13ce-452b-ac80-a82c831d856b",
-            "sourceColumn": "[Date]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
-          },
-          {
-            "name": "Day",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
-              }
-            ],
-            "dataCategory": "DayOfMonth",
-            "dataType": "int64",
-            "expression": "DAY([Date])",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "3423b9dc-be63-4256-bef5-1c17915df90f",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Month",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ],
-            "dataCategory": "Months",
-            "dataType": "string",
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "a92fd007-9327-4a65-8248-58b145cb5a7a",
-            "sortByColumn": "MonthNo",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "MonthNo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ],
-            "dataCategory": "MonthOfYear",
-            "dataType": "int64",
-            "expression": "MONTH([Date])",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "bd41bb08-d2ca-4a3c-9742-3996a03082e7",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Quarter",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ],
-            "dataCategory": "Quarters",
-            "dataType": "string",
-            "expression": "\"Qtr \" & [QuarterNo]",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "0d50394c-d20f-4f0c-a9ab-17e4007294b3",
-            "sortByColumn": "QuarterNo",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "QuarterNo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
-              }
-            ],
-            "dataCategory": "QuarterOfYear",
-            "dataType": "int64",
-            "expression": "INT(([MonthNo] + 2) / 3)",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "a896c5aa-af39-4dbd-bc51-02de3c969ab2",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Year",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ],
-            "dataCategory": "Years",
-            "dataType": "int64",
-            "expression": "YEAR([Date])",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "afe4995a-8b2a-4518-86ce-addee0af1f5e",
-            "summarizeBy": "none",
-            "type": "calculated"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Date Hierarchy",
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ],
-            "levels": [
-              {
-                "name": "Year",
-                "column": "Year",
-                "lineageTag": "0b5a9946-2e04-40c2-b5fc-ad95f2c90cac",
-                "ordinal": 0
-              },
-              {
-                "name": "Quarter",
-                "column": "Quarter",
-                "lineageTag": "a4dbb088-e35b-405d-8732-aae941138bdb",
-                "ordinal": 1
-              },
-              {
-                "name": "Month",
-                "column": "Month",
-                "lineageTag": "fee717a4-38bf-42e2-9987-b92e510a9959",
-                "ordinal": 2
-              },
-              {
-                "name": "Day",
-                "column": "Day",
-                "lineageTag": "a66fcb96-285c-457f-b457-610140401e97",
-                "ordinal": 3
-              }
-            ],
-            "lineageTag": "df8c8a8e-0c9a-4245-a8d3-bd8db11345a4"
-          }
-        ],
-        "isHidden": true,
-        "isPrivate": true,
-        "lineageTag": "2a3925df-26cd-48c6-b0a0-096d073cf24d",
-        "partitions": [
-          {
-            "name": "DateTableTemplate_eee22f46-6610-45d5-b789-23d09a1c5849-ce7eb36b-c10e-42c2-a973-28d8480a4a99",
-            "mode": "import",
-            "source": {
-              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
-              "type": "calculated"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Extra Year",
-        "columns": [
-          {
-            "name": "Extra year",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ],
-            "dataType": "int64",
-            "extendedProperties": [
-              {
-                "name": "ParameterMetadata",
-                "type": "json",
-                "value": {
-                  "version": 0
-                }
-              }
-            ],
-            "formatString": "0",
-            "isDataTypeInferred": true,
-            "isNameInferred": false,
-            "lineageTag": "93344145-9253-437c-a9ee-7297e02627c0",
-            "sourceColumn": "[Value]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
-          }
-        ],
-        "lineageTag": "805f6912-6c51-406f-9351-bdf9c32642ed",
-        "measures": [
-          {
-            "name": "Extra year Value",
-            "expression": "SELECTEDVALUE('Extra Year'[Extra year])",
-            "lineageTag": "8b1b27f5-1ff1-4b9b-83ca-1270a6a4ed3c"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Extra Year-ff2f05c6-1996-43f1-8aa8-329d7d354603",
-            "mode": "import",
-            "source": {
-              "expression": "GENERATESERIES(1800, 2017, 1)",
-              "type": "calculated"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Flags",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Country",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "2a511b51-f3fe-4910-aebe-b8b4c74753ee",
-            "sourceColumn": "Country",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Country Code",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "af6ad719-2065-4dde-94d4-bfdab7569301",
-            "sourceColumn": "Country Code",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "ImageURL",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "a9646908-d32e-47c5-8f54-e73e4670545c",
-            "sourceColumn": "ImageURL",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Images File Name",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "429f212e-52ca-4559-ab38-7e22696ae98b",
-            "sourceColumn": "Images File Name",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "fae08b9e-4b3a-4989-8cc9-8c619104619b",
-        "partitions": [
-          {
-            "name": "Flags-d6fea5e1-52e1-40ac-a570-cd8b6fe332e4",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Country_Flags.csv\"),[Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}}),",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
-                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Promoted Headers\",{\"\"})",
-                "in",
-                "    #\"Removed Columns\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
         "name": "Indicators",
         "annotations": [
           {
@@ -15157,7 +14612,22 @@
         ],
         "columns": [
           {
-            "name": "% of income held by poorest 20%",
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "displayFolder": "01 Socio-economic KPIs",
+            "formatString": "0",
+            "lineageTag": "390658fd-f277-4d65-80a6-cfe0f6742574",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -15165,11 +14635,400 @@
               }
             ],
             "dataType": "string",
-            "expression": "if(isblank(Indicators[Income share held by lowest 20%]), \"null\", if( Indicators[Income share held by lowest 20%] < 2, \"less than 2%\", if( Indicators[Income share held by lowest 20%] >= 2 && Indicators[Income share held by lowest 20%] < 4, \"2% - 4%\", if( Indicators[Income share held by lowest 20%] >= 4 && Indicators[Income share held by lowest 20%] < 6, \"4% - 6%\", if( Indicators[Income share held by lowest 20%] >= 6 && Indicators[Income share held by lowest 20%] < 8, \"6% - 8%\", \"more than 8%\")))))",
-            "isDataTypeInferred": true,
-            "lineageTag": "641190bf-7f7f-4504-9b7e-51f897805cd5",
-            "summarizeBy": "none",
-            "type": "calculated"
+            "lineageTag": "77db5be8-c375-4259-8f03-eb0a77129e8c",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b6d3355-85ec-44b7-b759-706314a4f0ff",
+            "sourceColumn": "Country Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dcb4b460-e10a-4c36-9db4-69bd5cc6928f",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sex",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "125eb7ec-bdfc-45da-a638-fe6da024fe3d",
+            "sourceColumn": "Sex",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cholera case fatality rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "db0c1b1c-7f0d-43cd-a174-8818c941c952",
+            "sourceColumn": "Cholera case fatality rate",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Number of neonatal deaths (thousands)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e23a61e4-3f84-406e-8bc7-8c9c08453a77",
+            "sourceColumn": "Number of neonatal deaths (thousands)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Malaria - number of reported deaths",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bf2b6a5b-7cf5-446c-b1ff-1df4ffd6cde6",
+            "sourceColumn": "Malaria - number of reported deaths",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Estimated number of malaria deaths",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "800ad3fb-4338-4f91-a9c7-f2bfb9c82f93",
+            "sourceColumn": "Estimated number of malaria deaths",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Under-five mortality rate (probability of dying by age 5 per 1000 live births)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "943c2033-003f-45de-a9d1-635002a0f7f8",
+            "sourceColumn": "Under-five mortality rate (probability of dying by age 5 per 1000 live births)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Children aged <5 years sleeping under insecticide-treated nets (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "45b8e3a9-6e76-459f-9678-f7bcd713058c",
+            "sourceColumn": "Children aged <5 years sleeping under insecticide-treated nets (%)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Incidence of tuberculosis (per 100 000 population per year)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e48d5d1e-f037-4058-88fa-619f8c4c060b",
+            "sourceColumn": "Incidence of tuberculosis (per 100 000 population per year)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Prevalence of tuberculosis (per 100 000 population)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ec230bb1-6108-4cd7-81a9-145cd688a82b",
+            "sourceColumn": "Prevalence of tuberculosis (per 100 000 population)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Births attended by skilled health personnel, among girls aged 15-19 (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c06cb4e1-3e99-4a38-9f0f-241f32707f79",
+            "sourceColumn": "Births attended by skilled health personnel, among girls aged 15-19 (%)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Maternal mortality ratio (per 100 000 live births)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4cfe1a5f-58f0-4157-ba69-7963d7a0d440",
+            "sourceColumn": "Maternal mortality ratio (per 100 000 live births)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Life expectancy at birth (years)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "27882e19-4f6b-49d2-bb83-ff880c07a904",
+            "sourceColumn": "Life expectancy at birth (years)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Neonatal mortality rate (per 1000 live births)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "043b8bca-871b-4fc5-b316-26efb8df9e4e",
+            "sourceColumn": "Neonatal mortality rate (per 1000 live births)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Life expectancy at age 60 (years)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "50063520-18e3-4758-9c44-a42ff9194e71",
+            "sourceColumn": "Life expectancy at age 60 (years)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Hepatitis B (HepB3) immunization coverage among 1-year-olds (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0501dec0-d238-436b-a2c7-ec7b136fb224",
+            "sourceColumn": "Hepatitis B (HepB3) immunization coverage among 1-year-olds (%)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Hib (Hib3) immunization coverage among 1-year-olds (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2a5f054e-64cb-48cc-86cc-dd6fea5d072f",
+            "sourceColumn": "Hib (Hib3) immunization coverage among 1-year-olds (%)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Hospital beds (per 10 000 population)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "45eb3cbe-a3da-4ba1-8a25-b78be5181ec8",
+            "sourceColumn": "Hospital beds (per 10 000 population)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "General government expenditure on health as a percentage of total government expenditure",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0b000ce8-4f02-4d31-a973-8a239f30b10b",
+            "sourceColumn": "General government expenditure on health as a percentage of total government expenditure",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "General government expenditure on health as a percentage of total expenditure on health",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "__PBI_SemanticLinks",
+                "value": "[{\"LinkTarget\":{\"TableName\":\"Indicators\",\"TableItemName\":\"General government expenditure on health as a percentage of total expenditure on health (bins)\",\"ObjectType\":4},\"LinkType\":\"UsedInGroup\"}]"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0fb85dea-f2c3-43aa-a9ef-25a77c792929",
+            "sourceColumn": "General government expenditure on health as a percentage of total expenditure on health",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Measles-containing-vaccine first-dose (MCV1) immunization coverage among 1-year-olds (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2a5c5fb1-ed86-4090-a768-6ee75c5c0d6d",
+            "sourceColumn": "Measles-containing-vaccine first-dose (MCV1) immunization coverage among 1-year-olds (%)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Gross national income per capita (PPP int. $)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "83ece6ad-6722-4596-a61e-f73522fedc8d",
+            "sourceColumn": "Gross national income per capita (PPP int. $)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Number of community health workers",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fc1eb9f1-ab7f-4d8b-a709-65e818c0115c",
+            "sourceColumn": "Number of community health workers",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Community health workers density (per 10 000 population)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cd391912-b1eb-47dc-99eb-6a0fe5a54c09",
+            "sourceColumn": "Community health workers density (per 10 000 population)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Children aged <5 years with ARI symptoms who took antibiotic treatment (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "464ca244-0898-458b-a978-97db7881e1ff",
+            "sourceColumn": "Children aged <5 years with ARI symptoms who took antibiotic treatment (%)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Income share held by lowest 20%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "__PBI_SemanticLinks",
+                "value": "[{\"LinkTarget\":{\"TableName\":\"Indicators\",\"TableItemName\":\"Income share held by lowest 20% (bins)\",\"ObjectType\":4},\"LinkType\":\"UsedInGroup\"}]"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0d9eafe4-fa7c-465b-9686-2d76e25ad783",
+            "sourceColumn": "Income share held by lowest 20%",
+            "summarizeBy": "sum"
           },
           {
             "name": "% of population living on less than $1.90 per day",
@@ -15194,158 +15053,72 @@
             "summarizeBy": "none"
           },
           {
-            "name": "All Cells",
+            "name": "Net national income per capita",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "expression": "\"All\"",
-            "isDataTypeInferred": true,
-            "lineageTag": "528d69ca-fca9-4ffb-a0e4-af26cf966cd7",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Basic drinking water services (% of population)",
-            "annotations": [
+                "value": "User"
+              },
               {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "string",
-            "expression": "if( Indicators[People using at least basic drinking water services (% of population)]< 50, \"Less than 50%\", if( Indicators[People using at least basic drinking water services (% of population)] >= 50 && Indicators[People using at least basic drinking water services (% of population)] < 70, \"50% - 70%\", if( Indicators[People using at least basic drinking water services (% of population)] >= 70 && Indicators[People using at least basic drinking water services (% of population)] < 90, \"70% - 90%\", \"More than 90%\")))",
-            "isDataTypeInferred": true,
-            "lineageTag": "4b3197e0-1205-4218-b43a-ae8e256648a4",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Births attended by skilled health personnel, among girls aged 15-19 (%)",
-            "annotations": [
+            "changedProperties": [
               {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "property": "DataType"
               }
             ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "c06cb4e1-3e99-4a38-9f0f-241f32707f79",
-            "sourceColumn": "Births attended by skilled health personnel, among girls aged 15-19 (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Children aged <5 years sleeping under insecticide-treated nets (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "45b8e3a9-6e76-459f-9678-f7bcd713058c",
-            "sourceColumn": "Children aged <5 years sleeping under insecticide-treated nets (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Children aged <5 years with ARI symptoms who took antibiotic treatment (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "464ca244-0898-458b-a978-97db7881e1ff",
-            "sourceColumn": "Children aged <5 years with ARI symptoms who took antibiotic treatment (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Cholera case fatality rate",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "db0c1b1c-7f0d-43cd-a174-8818c941c952",
-            "sourceColumn": "Cholera case fatality rate",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Community health workers density (per 10 000 population)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "cd391912-b1eb-47dc-99eb-6a0fe5a54c09",
-            "sourceColumn": "Community health workers density (per 10 000 population)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Country",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "dcb4b460-e10a-4c36-9db4-69bd5cc6928f",
-            "sourceColumn": "Country",
+            "dataType": "double",
+            "displayFolder": "01 Socio-economic KPIs",
+            "lineageTag": "38541923-0dfb-434e-9e7e-ae3a9564a9db",
+            "sourceColumn": "Net national income per capita",
             "summarizeBy": "none"
           },
           {
-            "name": "Country Code",
+            "name": "GDP per capita (current US$)",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "string",
-            "lineageTag": "8b6d3355-85ec-44b7-b759-706314a4f0ff",
-            "sourceColumn": "Country Code",
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "05574980-da21-488e-b556-0a6bcf017f90",
+            "sourceColumn": "GDP per capita (current US$)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Percentage of female population with no education",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "double",
+            "displayFolder": "01 Socio-economic KPIs",
+            "lineageTag": "9da14df1-3338-4224-a087-f589b29ad1e9",
+            "sourceColumn": "Percentage of female population with no education",
             "summarizeBy": "none"
-          },
-          {
-            "name": "Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "731bc3cc-4e35-47b1-a660-702e90445b7c",
-            "sourceColumn": "Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Estimated number of malaria deaths",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "800ad3fb-4338-4f91-a9c7-f2bfb9c82f93",
-            "sourceColumn": "Estimated number of malaria deaths",
-            "summarizeBy": "sum"
           },
           {
             "name": "Female pupils below minimum reading proficiency at end of primary (%)",
@@ -15372,6 +15145,28 @@
             "summarizeBy": "none"
           },
           {
+            "name": "Life expectancy (yrs)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "66499afb-658b-4569-a08f-1bf238b8a52d",
+            "sourceColumn": "Life expectancy (yrs)",
+            "summarizeBy": "sum"
+          },
+          {
             "name": "GDP per capita (US $)",
             "annotations": [
               {
@@ -15394,11 +15189,11 @@
             "summarizeBy": "none"
           },
           {
-            "name": "GDP per capita (current US $) (bins)",
+            "name": "Income share held by lowest 20% (bins)",
             "annotations": [
               {
                 "name": "GroupingDesignState",
-                "value": "{\"Version\":0,\"Sources\":[{\"Name\":\"h\",\"Entity\":\"Indicators\"}],\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"GDP per capita (US $)\"}}],\"BinItem\":{\"Expression\":{\"Member\":{\"Expression\":{\"Discretize\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"GDP per capita (US $)\"}},\"Count\":10}},\"Member\":\"Min\"}}}}"
+                "value": "{\"Version\":0,\"Sources\":[{\"Name\":\"h\",\"Entity\":\"Indicators\"}],\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Income share held by lowest 20%\"}}],\"BinItem\":{\"Expression\":{\"Member\":{\"Expression\":{\"Discretize\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Income share held by lowest 20%\"}},\"Count\":6}},\"Member\":\"Min\"}}}}"
               },
               {
                 "name": "SummarizationSetBy",
@@ -15411,11 +15206,11 @@
             ],
             "dataType": "double",
             "expression": [
-              "VAR __Count = 10",
+              "VAR __Count = 6",
               "",
-              "VAR __Min = MIN('Indicators'[GDP per capita (US $)])",
+              "VAR __Min = MIN('Indicators'[Income share held by lowest 20%])",
               "",
-              "VAR __Max = MAX('Indicators'[GDP per capita (US $)])",
+              "VAR __Max = MAX('Indicators'[Income share held by lowest 20%])",
               "",
               "VAR __Difference = (__Max - __Min)",
               "",
@@ -15423,14 +15218,14 @@
               "",
               "VAR __BinNumber = ",
               "  IF(",
-              "    ISBLANK('Indicators'[GDP per capita (US $)]),",
+              "    ISBLANK('Indicators'[Income share held by lowest 20%]),",
               "    BLANK(),",
-              "    ROUNDDOWN(('Indicators'[GDP per capita (US $)] - __Min) / __Size, 0)",
+              "    ROUNDDOWN(('Indicators'[Income share held by lowest 20%] - __Min) / __Size, 0)",
               "  )",
               "",
               "RETURN",
               "  IF(",
-              "    ISBLANK('Indicators'[GDP per capita (US $)]),",
+              "    ISBLANK('Indicators'[Income share held by lowest 20%]),",
               "    BLANK(),",
               "    __Min + (MIN(__BinNumber, __Count - 1) * __Size)",
               "  )"
@@ -15448,7 +15243,7 @@
                             "Entity": "Indicators"
                           }
                         },
-                        "Property": "GDP per capita (US $)"
+                        "Property": "Income share held by lowest 20%"
                       }
                     }
                   ],
@@ -15457,49 +15252,9 @@
               }
             ],
             "isDataTypeInferred": true,
-            "lineageTag": "ddf7d242-6e17-4193-8f4f-dfe1ff776333",
+            "lineageTag": "4e4d347d-951c-4620-a9eb-96ba5e9751a2",
             "summarizeBy": "none",
             "type": "calculated"
-          },
-          {
-            "name": "GDP per capita (current US$)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "changedProperties": [
-              {
-                "property": "DataType"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "05574980-da21-488e-b556-0a6bcf017f90",
-            "sourceColumn": "GDP per capita (current US$)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "General government expenditure on health as a percentage of total expenditure on health",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "__PBI_SemanticLinks",
-                "value": "[{\"LinkTarget\":{\"TableName\":\"Indicators\",\"TableItemName\":\"General government expenditure on health as a percentage of total expenditure on health (bins)\",\"ObjectType\":4},\"LinkType\":\"UsedInGroup\"}]"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "0fb85dea-f2c3-43aa-a9ef-25a77c792929",
-            "sourceColumn": "General government expenditure on health as a percentage of total expenditure on health",
-            "summarizeBy": "sum"
           },
           {
             "name": "General government expenditure on health as a percentage of total expenditure on health (bins)",
@@ -15576,77 +15331,6 @@
             "type": "calculated"
           },
           {
-            "name": "General government expenditure on health as a percentage of total government expenditure",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "0b000ce8-4f02-4d31-a973-8a239f30b10b",
-            "sourceColumn": "General government expenditure on health as a percentage of total government expenditure",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Gross national income per capita (PPP int. $)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "83ece6ad-6722-4596-a61e-f73522fedc8d",
-            "sourceColumn": "Gross national income per capita (PPP int. $)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Hepatitis B (HepB3) immunization coverage among 1-year-olds (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "0501dec0-d238-436b-a2c7-ec7b136fb224",
-            "sourceColumn": "Hepatitis B (HepB3) immunization coverage among 1-year-olds (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Hib (Hib3) immunization coverage among 1-year-olds (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "2a5f054e-64cb-48cc-86cc-dd6fea5d072f",
-            "sourceColumn": "Hib (Hib3) immunization coverage among 1-year-olds (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Hib3 immunization coverage among 1 year olds (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "expression": "if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] < 40, \"less than 40%\", if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] >= 40 && Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)]  < 60, \"40% - 60%\", if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)]  >= 60 && Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] < 80, \"60% - 80\", if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] >= 80 &&Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)]  < 90, \"80% - 90%\" ,\"more than 90%\"))))",
-            "isDataTypeInferred": true,
-            "lineageTag": "90e564e3-8d07-495a-b9ce-21399508a289",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
             "name": "High/Low",
             "annotations": [
               {
@@ -15662,80 +15346,11 @@
             "type": "calculated"
           },
           {
-            "name": "Hospital beds (per 10 000 population)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "45eb3cbe-a3da-4ba1-8a25-b78be5181ec8",
-            "sourceColumn": "Hospital beds (per 10 000 population)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Hospital beds per 10,000 people",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "expression": "if( Indicators[Hospital beds (per 10 000 population)] < 15 , \"less than 15\", if( Indicators[Hospital beds (per 10 000 population)] >= 15 && Indicators[Hospital beds (per 10 000 population)]< 30, \"15 - 30\", if(Indicators[Hospital beds (per 10 000 population)] >=30 && Indicators[Hospital beds (per 10 000 population)] < 45, \"30 - 45\", if( Indicators[Hospital beds (per 10 000 population)] >= 45 && Indicators[Hospital beds (per 10 000 population)] < 60, \"45 - 60\" ,\"more than 60\"))))",
-            "isDataTypeInferred": true,
-            "lineageTag": "111ecffd-39c0-4829-a534-86e3364ed520",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Incidence of tuberculosis (per 100 000 population per year)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "e48d5d1e-f037-4058-88fa-619f8c4c060b",
-            "sourceColumn": "Incidence of tuberculosis (per 100 000 population per year)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Income share held by lowest 20%",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "__PBI_SemanticLinks",
-                "value": "[{\"LinkTarget\":{\"TableName\":\"Indicators\",\"TableItemName\":\"Income share held by lowest 20% (bins)\",\"ObjectType\":4},\"LinkType\":\"UsedInGroup\"}]"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "changedProperties": [
-              {
-                "property": "DataType"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "0d9eafe4-fa7c-465b-9686-2d76e25ad783",
-            "sourceColumn": "Income share held by lowest 20%",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Income share held by lowest 20% (bins)",
+            "name": "GDP per capita (current US $) (bins)",
             "annotations": [
               {
                 "name": "GroupingDesignState",
-                "value": "{\"Version\":0,\"Sources\":[{\"Name\":\"h\",\"Entity\":\"Indicators\"}],\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Income share held by lowest 20%\"}}],\"BinItem\":{\"Expression\":{\"Member\":{\"Expression\":{\"Discretize\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Income share held by lowest 20%\"}},\"Count\":6}},\"Member\":\"Min\"}}}}"
+                "value": "{\"Version\":0,\"Sources\":[{\"Name\":\"h\",\"Entity\":\"Indicators\"}],\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"GDP per capita (US $)\"}}],\"BinItem\":{\"Expression\":{\"Member\":{\"Expression\":{\"Discretize\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"GDP per capita (US $)\"}},\"Count\":10}},\"Member\":\"Min\"}}}}"
               },
               {
                 "name": "SummarizationSetBy",
@@ -15748,11 +15363,11 @@
             ],
             "dataType": "double",
             "expression": [
-              "VAR __Count = 6",
+              "VAR __Count = 10",
               "",
-              "VAR __Min = MIN('Indicators'[Income share held by lowest 20%])",
+              "VAR __Min = MIN('Indicators'[GDP per capita (US $)])",
               "",
-              "VAR __Max = MAX('Indicators'[Income share held by lowest 20%])",
+              "VAR __Max = MAX('Indicators'[GDP per capita (US $)])",
               "",
               "VAR __Difference = (__Max - __Min)",
               "",
@@ -15760,14 +15375,14 @@
               "",
               "VAR __BinNumber = ",
               "  IF(",
-              "    ISBLANK('Indicators'[Income share held by lowest 20%]),",
+              "    ISBLANK('Indicators'[GDP per capita (US $)]),",
               "    BLANK(),",
-              "    ROUNDDOWN(('Indicators'[Income share held by lowest 20%] - __Min) / __Size, 0)",
+              "    ROUNDDOWN(('Indicators'[GDP per capita (US $)] - __Min) / __Size, 0)",
               "  )",
               "",
               "RETURN",
               "  IF(",
-              "    ISBLANK('Indicators'[Income share held by lowest 20%]),",
+              "    ISBLANK('Indicators'[GDP per capita (US $)]),",
               "    BLANK(),",
               "    __Min + (MIN(__BinNumber, __Count - 1) * __Size)",
               "  )"
@@ -15785,7 +15400,7 @@
                             "Entity": "Indicators"
                           }
                         },
-                        "Property": "Income share held by lowest 20%"
+                        "Property": "GDP per capita (US $)"
                       }
                     }
                   ],
@@ -15794,205 +15409,9 @@
               }
             ],
             "isDataTypeInferred": true,
-            "lineageTag": "4e4d347d-951c-4620-a9eb-96ba5e9751a2",
+            "lineageTag": "ddf7d242-6e17-4193-8f4f-dfe1ff776333",
             "summarizeBy": "none",
             "type": "calculated"
-          },
-          {
-            "name": "Life Exp Buckets",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "expression": [
-              "",
-              "IF(Indicators[Life expectancy (yrs)]<30,20,",
-              "IF(Indicators[Life expectancy (yrs)]<45,30,",
-              "IF(Indicators[Life expectancy (yrs)]<60,45,",
-              "IF(Indicators[Life expectancy (yrs)]<70,60,",
-              "IF(Indicators[Life expectancy (yrs)]<80,70,",
-              "80))))",
-              ")"
-            ],
-            "formatString": "0",
-            "isDataTypeInferred": true,
-            "lineageTag": "138381fa-3b6b-4913-bc9a-e0c9f90f97ac",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Life expectancy (yrs)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "changedProperties": [
-              {
-                "property": "DataType"
-              }
-            ],
-            "dataType": "double",
-            "lineageTag": "66499afb-658b-4569-a08f-1bf238b8a52d",
-            "sourceColumn": "Life expectancy (yrs)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Life expectancy at age 60 (years)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "50063520-18e3-4758-9c44-a42ff9194e71",
-            "sourceColumn": "Life expectancy at age 60 (years)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Life expectancy at birth (years)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "27882e19-4f6b-49d2-bb83-ff880c07a904",
-            "sourceColumn": "Life expectancy at birth (years)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Malaria - number of reported deaths",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "bf2b6a5b-7cf5-446c-b1ff-1df4ffd6cde6",
-            "sourceColumn": "Malaria - number of reported deaths",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Maternal mortality ratio (per 100 000 live births)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "4cfe1a5f-58f0-4157-ba69-7963d7a0d440",
-            "sourceColumn": "Maternal mortality ratio (per 100 000 live births)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Measles - number of reported cases",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "9d4d3338-7242-40f8-aa84-3fe1ab65292e",
-            "sourceColumn": "Measles - number of reported cases",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Measles-containing-vaccine first-dose (MCV1) immunization coverage among 1-year-olds (%)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "2a5c5fb1-ed86-4090-a768-6ee75c5c0d6d",
-            "sourceColumn": "Measles-containing-vaccine first-dose (MCV1) immunization coverage among 1-year-olds (%)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Neonatal mortality rate (per 1000 live births)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "043b8bca-871b-4fc5-b316-26efb8df9e4e",
-            "sourceColumn": "Neonatal mortality rate (per 1000 live births)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Net national income per capita",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "changedProperties": [
-              {
-                "property": "DataType"
-              }
-            ],
-            "dataType": "double",
-            "displayFolder": "01 Socio-economic KPIs",
-            "lineageTag": "38541923-0dfb-434e-9e7e-ae3a9564a9db",
-            "sourceColumn": "Net national income per capita",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Number of community health workers",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "fc1eb9f1-ab7f-4d8b-a709-65e818c0115c",
-            "sourceColumn": "Number of community health workers",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Number of neonatal deaths (thousands)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "e23a61e4-3f84-406e-8bc7-8c9c08453a77",
-            "sourceColumn": "Number of neonatal deaths (thousands)",
-            "summarizeBy": "sum"
           },
           {
             "name": "People using at least basic drinking water services (% of population)",
@@ -16040,44 +15459,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Percentage of female population with no education",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "changedProperties": [
-              {
-                "property": "DataType"
-              }
-            ],
-            "dataType": "double",
-            "displayFolder": "01 Socio-economic KPIs",
-            "lineageTag": "9da14df1-3338-4224-a087-f589b29ad1e9",
-            "sourceColumn": "Percentage of female population with no education",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Prevalence of tuberculosis (per 100 000 population)",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "ec230bb1-6108-4cd7-81a9-145cd688a82b",
-            "sourceColumn": "Prevalence of tuberculosis (per 100 000 population)",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Region",
+            "name": "% of income held by poorest 20%",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16085,9 +15467,26 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "77db5be8-c375-4259-8f03-eb0a77129e8c",
-            "sourceColumn": "Region",
-            "summarizeBy": "none"
+            "expression": "if(isblank(Indicators[Income share held by lowest 20%]), \"null\", if( Indicators[Income share held by lowest 20%] < 2, \"less than 2%\", if( Indicators[Income share held by lowest 20%] >= 2 && Indicators[Income share held by lowest 20%] < 4, \"2% - 4%\", if( Indicators[Income share held by lowest 20%] >= 4 && Indicators[Income share held by lowest 20%] < 6, \"4% - 6%\", if( Indicators[Income share held by lowest 20%] >= 6 && Indicators[Income share held by lowest 20%] < 8, \"6% - 8%\", \"more than 8%\")))))",
+            "isDataTypeInferred": true,
+            "lineageTag": "641190bf-7f7f-4504-9b7e-51f897805cd5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Basic drinking water services (% of population)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "if( Indicators[People using at least basic drinking water services (% of population)]< 50, \"Less than 50%\", if( Indicators[People using at least basic drinking water services (% of population)] >= 50 && Indicators[People using at least basic drinking water services (% of population)] < 70, \"50% - 70%\", if( Indicators[People using at least basic drinking water services (% of population)] >= 70 && Indicators[People using at least basic drinking water services (% of population)] < 90, \"70% - 90%\", \"More than 90%\")))",
+            "isDataTypeInferred": true,
+            "lineageTag": "4b3197e0-1205-4218-b43a-ae8e256648a4",
+            "summarizeBy": "none",
+            "type": "calculated"
           },
           {
             "name": "Safe drinking water services (% of population)",
@@ -16106,7 +15505,7 @@
             "type": "calculated"
           },
           {
-            "name": "Sex",
+            "name": "Hospital beds per 10,000 people",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16114,12 +15513,69 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "125eb7ec-bdfc-45da-a638-fe6da024fe3d",
-            "sourceColumn": "Sex",
-            "summarizeBy": "none"
+            "expression": "if( Indicators[Hospital beds (per 10 000 population)] < 15 , \"less than 15\", if( Indicators[Hospital beds (per 10 000 population)] >= 15 && Indicators[Hospital beds (per 10 000 population)]< 30, \"15 - 30\", if(Indicators[Hospital beds (per 10 000 population)] >=30 && Indicators[Hospital beds (per 10 000 population)] < 45, \"30 - 45\", if( Indicators[Hospital beds (per 10 000 population)] >= 45 && Indicators[Hospital beds (per 10 000 population)] < 60, \"45 - 60\" ,\"more than 60\"))))",
+            "isDataTypeInferred": true,
+            "lineageTag": "111ecffd-39c0-4829-a534-86e3364ed520",
+            "summarizeBy": "none",
+            "type": "calculated"
           },
           {
-            "name": "Under-five mortality rate (probability of dying by age 5 per 1000 live births)",
+            "name": "Hib3 immunization coverage among 1 year olds (%)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] < 40, \"less than 40%\", if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] >= 40 && Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)]  < 60, \"40% - 60%\", if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)]  >= 60 && Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] < 80, \"60% - 80\", if( Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)] >= 80 &&Indicators[Hib (Hib3) immunization coverage among 1-year-olds (%)]  < 90, \"80% - 90%\" ,\"more than 90%\"))))",
+            "isDataTypeInferred": true,
+            "lineageTag": "90e564e3-8d07-495a-b9ce-21399508a289",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Life Exp Buckets",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": [
+              "",
+              "IF(Indicators[Life expectancy (yrs)]<30,20,",
+              "IF(Indicators[Life expectancy (yrs)]<45,30,",
+              "IF(Indicators[Life expectancy (yrs)]<60,45,",
+              "IF(Indicators[Life expectancy (yrs)]<70,60,",
+              "IF(Indicators[Life expectancy (yrs)]<80,70,",
+              "80))))",
+              ")"
+            ],
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "138381fa-3b6b-4913-bc9a-e0c9f90f97ac",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "All Cells",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "\"All\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "528d69ca-fca9-4ffb-a0e4-af26cf966cd7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Measles - number of reported cases",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16128,12 +15584,12 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "943c2033-003f-45de-a9d1-635002a0f7f8",
-            "sourceColumn": "Under-five mortality rate (probability of dying by age 5 per 1000 live births)",
+            "lineageTag": "9d4d3338-7242-40f8-aa84-3fe1ab65292e",
+            "sourceColumn": "Measles - number of reported cases",
             "summarizeBy": "sum"
           },
           {
-            "name": "Year",
+            "name": "Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16141,11 +15597,10 @@
               }
             ],
             "dataType": "int64",
-            "displayFolder": "01 Socio-economic KPIs",
             "formatString": "0",
-            "lineageTag": "390658fd-f277-4d65-80a6-cfe0f6742574",
-            "sourceColumn": "Year",
-            "summarizeBy": "none"
+            "lineageTag": "731bc3cc-4e35-47b1-a660-702e90445b7c",
+            "sourceColumn": "Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)",
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "1e777276-e70b-4838-a9d0-f1d4099c7173",
@@ -16246,126 +15701,15 @@
         ]
       },
       {
-        "name": "Legend",
+        "name": "DateTableTemplate_eee22f46-6610-45d5-b789-23d09a1c5849",
         "annotations": [
           {
-            "name": "PBI_QueryRelationships",
-            "value": "{\"columnCount\":6,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Legend/Changed Type.{Metric,0}\",\"Section1/Legend/Changed Type.{Bubble01,1}\",\"Section1/Legend/Changed Type.{Bubble02,2}\",\"Section1/Legend/Changed Type.{Bubble03,3}\",\"Section1/Legend/Changed Type.{Bubble04,4}\",\"Section1/Legend/Changed Type.{Bubble05,5}\"],\"ColumnCount\":6,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Legend/Changed Type.{Metric,0}\",\"Section1/Legend/Changed Type.{Bubble01,1}\",\"Section1/Legend/Changed Type.{Bubble02,2}\",\"Section1/Legend/Changed Type.{Bubble03,3}\",\"Section1/Legend/Changed Type.{Bubble04,4}\",\"Section1/Legend/Changed Type.{Bubble05,5}\"],\"RelationshipInfo\":[]}"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Bubble01",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "334832d1-5da7-453b-aee9-b4af8827f37d",
-            "sourceColumn": "Bubble01",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Bubble02",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "6b3dad39-de99-4478-bbb8-ba861e26569c",
-            "sourceColumn": "Bubble02",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Bubble03",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "ae41345c-31b8-4151-bf26-95cca2477596",
-            "sourceColumn": "Bubble03",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Bubble04",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "b7c7a955-7507-419e-a808-6bc595851903",
-            "sourceColumn": "Bubble04",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Bubble05",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "ec512044-7881-49e7-9c21-e1d181445707",
-            "sourceColumn": "Bubble05",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Metric",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "0439d427-2309-4467-bcfc-c5d9ef898089",
-            "sourceColumn": "Metric",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "d32cabf6-336a-4f5b-a12d-d94097be9a05",
-        "partitions": [
-          {
-            "name": "Legend-65f60753-9014-41bd-a4ba-599ebcf69f8e",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45W8slMS1VwrShITS5JzEuuVNCITE0sKtZU0lEyNgASJqZAwgzEMgcRFgZKsbEA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Metric = _t, Bubble01 = _t, Bubble02 = _t, Bubble03 = _t, Bubble04 = _t, Bubble05 = _t]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Metric\", type text}, {\"Bubble01\", Int64.Type}, {\"Bubble02\", Int64.Type}, {\"Bubble03\", Int64.Type}, {\"Bubble04\", Int64.Type}, {\"Bubble05\", Int64.Type}})",
-                "in",
-                "    #\"Changed Type\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
-        "name": "LocalDateTable_021b8805-3ede-4d55-9182-0236ac5e0923",
-        "annotations": [
-          {
-            "name": "__PBI_LocalDateTable",
+            "name": "__PBI_TemplateDateTable",
             "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
           }
         ],
         "columns": [
@@ -16382,13 +15726,13 @@
             "isDataTypeInferred": true,
             "isHidden": true,
             "isNameInferred": true,
-            "lineageTag": "01f8d7ba-5d35-4f7d-a3a6-3e7f086d75d9",
+            "lineageTag": "14f68590-13ce-452b-ac80-a82c831d856b",
             "sourceColumn": "[Date]",
             "summarizeBy": "none",
             "type": "calculatedTableColumn"
           },
           {
-            "name": "Day",
+            "name": "Year",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16396,37 +15740,15 @@
               },
               {
                 "name": "TemplateId",
-                "value": "Day"
+                "value": "Year"
               }
             ],
-            "dataCategory": "DayOfMonth",
+            "dataCategory": "Years",
             "dataType": "int64",
-            "expression": "DAY([Date])",
+            "expression": "YEAR([Date])",
             "isDataTypeInferred": true,
             "isHidden": true,
-            "lineageTag": "e1b4f03a-acfe-4c51-877d-0ab14f7a2c9b",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Month",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ],
-            "dataCategory": "Months",
-            "dataType": "string",
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "f3112ffa-3b94-447b-8516-6afb2ce4414a",
-            "sortByColumn": "MonthNo",
+            "lineageTag": "afe4995a-8b2a-4518-86ce-addee0af1f5e",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -16447,12 +15769,12 @@
             "expression": "MONTH([Date])",
             "isDataTypeInferred": true,
             "isHidden": true,
-            "lineageTag": "99ad4c22-3bc8-45fb-9edc-f2815801ddbb",
+            "lineageTag": "bd41bb08-d2ca-4a3c-9742-3996a03082e7",
             "summarizeBy": "none",
             "type": "calculated"
           },
           {
-            "name": "Quarter",
+            "name": "Month",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16460,16 +15782,16 @@
               },
               {
                 "name": "TemplateId",
-                "value": "Quarter"
+                "value": "Month"
               }
             ],
-            "dataCategory": "Quarters",
+            "dataCategory": "Months",
             "dataType": "string",
-            "expression": "\"Qtr \" & [QuarterNo]",
+            "expression": "FORMAT([Date], \"MMMM\")",
             "isDataTypeInferred": true,
             "isHidden": true,
-            "lineageTag": "f614e29b-fa71-41f8-bd5a-b0ca5f4b332d",
-            "sortByColumn": "QuarterNo",
+            "lineageTag": "a92fd007-9327-4a65-8248-58b145cb5a7a",
+            "sortByColumn": "MonthNo",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -16490,12 +15812,12 @@
             "expression": "INT(([MonthNo] + 2) / 3)",
             "isDataTypeInferred": true,
             "isHidden": true,
-            "lineageTag": "981f992d-6644-460b-8710-c37ed13df906",
+            "lineageTag": "a896c5aa-af39-4dbd-bc51-02de3c969ab2",
             "summarizeBy": "none",
             "type": "calculated"
           },
           {
-            "name": "Year",
+            "name": "Quarter",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -16503,15 +15825,37 @@
               },
               {
                 "name": "TemplateId",
-                "value": "Year"
+                "value": "Quarter"
               }
             ],
-            "dataCategory": "Years",
-            "dataType": "int64",
-            "expression": "YEAR([Date])",
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
             "isDataTypeInferred": true,
             "isHidden": true,
-            "lineageTag": "99882ab1-350c-481c-9f9e-3ce0d8acdae3",
+            "lineageTag": "0d50394c-d20f-4f0c-a9ab-17e4007294b3",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "3423b9dc-be63-4256-bef5-1c17915df90f",
             "summarizeBy": "none",
             "type": "calculated"
           }
@@ -16529,44 +15873,292 @@
               {
                 "name": "Year",
                 "column": "Year",
-                "lineageTag": "3aaf221b-fc7a-4790-a4d4-715272522a8f",
+                "lineageTag": "0b5a9946-2e04-40c2-b5fc-ad95f2c90cac",
                 "ordinal": 0
               },
               {
                 "name": "Quarter",
                 "column": "Quarter",
-                "lineageTag": "e1186671-fdaa-4c7f-ad51-4fcaeb9c6f7f",
+                "lineageTag": "a4dbb088-e35b-405d-8732-aae941138bdb",
                 "ordinal": 1
               },
               {
                 "name": "Month",
                 "column": "Month",
-                "lineageTag": "573e4b2d-9c72-4013-bd7a-6660d14e99d5",
+                "lineageTag": "fee717a4-38bf-42e2-9987-b92e510a9959",
                 "ordinal": 2
               },
               {
                 "name": "Day",
                 "column": "Day",
-                "lineageTag": "c4ed0daf-0138-46fb-9f85-0dc448af15ae",
+                "lineageTag": "a66fcb96-285c-457f-b457-610140401e97",
                 "ordinal": 3
               }
             ],
-            "lineageTag": "ec4e0df8-80ba-45f3-bf8a-470d4f909525"
+            "lineageTag": "df8c8a8e-0c9a-4245-a8d3-bd8db11345a4"
           }
         ],
         "isHidden": true,
-        "lineageTag": "3d5fd457-457a-4b8e-af6e-15b45222bfdb",
+        "isPrivate": true,
+        "lineageTag": "2a3925df-26cd-48c6-b0a0-096d073cf24d",
         "partitions": [
           {
-            "name": "LocalDateTable_021b8805-3ede-4d55-9182-0236ac5e0923-cffa0efb-5dc1-4edf-8831-2f223b7cf220",
+            "name": "DateTableTemplate_eee22f46-6610-45d5-b789-23d09a1c5849-ce7eb36b-c10e-42c2-a973-28d8480a4a99",
             "mode": "import",
             "source": {
-              "expression": "Calendar(Date(Year(MIN('Year'[Date])), 1, 1), Date(Year(MAX('Year'[Date])), 12, 31))",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
               "type": "calculated"
             }
           }
+        ]
+      },
+      {
+        "name": "Year",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":1,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Year/Changed Type.{Year,0}\"],\"ColumnCount\":1,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Year/Changed Type.{Year,0}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
         ],
-        "showAsVariationsOnly": true
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5a7a90ad-1f07-4fc3-a345-5ca1c49ccd5a",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "8691aec3-865c-4eca-94bd-d4260d83160f",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_021b8805-3ede-4d55-9182-0236ac5e0923"
+                },
+                "isDefault": true,
+                "relationship": "af7cdcad-c7ce-42fc-88e8-db4ff74e4221"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "2dd08857-ddd2-47ae-b4f7-616ae54eb678",
+        "partitions": [
+          {
+            "name": "Year-23e82efd-b70c-4cfd-b750-b48b9204417e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Year.xlsx\"), null, true),",
+                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Year\", Int64.Type}}),",
+                "    #\"Inserted Date\" = Table.AddColumn(#\"Changed Type\", \"Date\", each Date.From(Text.From([Year], \"en-US\")), type date)",
+                "in",
+                "    #\"Inserted Date\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Country",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Country/Changed Type1.{Country,0}\",\"Section1/Country/Changed Type1.{Country Code,1}\",\"Section1/Country/Sheet1_Sheet.{Column3,2}\",\"Section1/Country/Sheet1_Sheet.{Column4,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Country/Changed Type1.{Country,0}\",\"Section1/Country/Changed Type1.{Country Code,1}\",\"Section1/Country/Sheet1_Sheet.{Column3,2}\",\"Section1/Country/Sheet1_Sheet.{Column4,3}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea214a7b-a5ac-41aa-82ce-79d015f2f1cf",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8929e644-5c27-46d4-89e2-6d3a87f1db4b",
+            "sourceColumn": "Country Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b398433a-64eb-4c8a-85cc-d6d4abd511ad",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Continent",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2da14718-c6d6-4783-b81c-07e701670dfa",
+            "sourceColumn": "Continent",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "World",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "\"Earth\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "e504558c-7274-4715-9242-1b9425e31052",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "74109f22-fea0-431e-b478-136e3acf05a0",
+        "partitions": [
+          {
+            "name": "Country-4f99a58d-cfd5-4495-ac82-4706c2bb285f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Country.xlsx\"), null, true),",
+                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Sheet1_Sheet,{{\"Column1\", type text}, {\"Column2\", type text}}),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Country\", type text}, {\"Country Code\", type text}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sex",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":1,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Sex/Changed Type1.{Gender,0}\"],\"ColumnCount\":1,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Sex/Changed Type1.{Gender,0}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Sex",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1c01512c-20bc-4b4b-8041-8a2b76a58d7a",
+            "sourceColumn": "Sex",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "ae5cdd40-e983-410b-87c7-d2794df5ab1a",
+        "partitions": [
+          {
+            "name": "Sex-edf84f72-3496-4ee0-95cd-f94bffa15474",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Sex.xlsx\"), null, true),",
+                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Sheet1_Sheet,{{\"Column1\", type text}}),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Gender\", type text}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type1\",{{\"Gender\", \"Sex\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       },
       {
         "name": "Metrics",
@@ -16997,156 +16589,212 @@
         ]
       },
       {
-        "name": "Population",
+        "name": "LocalDateTable_021b8805-3ede-4d55-9182-0236ac5e0923",
         "annotations": [
           {
-            "name": "PBI_QueryRelationships",
-            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/population (1)/Changed Type.{Entity,0}\",\"Section1/population (1)/Changed Type.{Code,1}\",\"Section1/population (1)/Changed Type.{Year,2}\",\"Section1/population (1)/Changed Type.{Population,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/population (1)/Changed Type.{Entity,0}\",\"Section1/population (1)/Changed Type.{Code,1}\",\"Section1/population (1)/Changed Type.{Year,2}\",\"Section1/population (1)/Changed Type.{Population,3}\"],\"RelationshipInfo\":[]}"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
           }
         ],
         "columns": [
           {
-            "name": "Code",
+            "name": "Date",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
-            "dataType": "string",
-            "lineageTag": "1ce35fb4-2717-4c96-8420-3ee966d70e81",
-            "sourceColumn": "Code",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Entity",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "ba1f125f-10e3-4b8d-9847-5d8f2fe03049",
-            "sourceColumn": "Entity",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Population",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "#,0",
-            "lineageTag": "78c2c51e-701c-4751-997a-1585f71065ec",
-            "sourceColumn": "Population",
-            "summarizeBy": "sum"
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "01f8d7ba-5d35-4f7d-a3a6-3e7f086d75d9",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
           },
           {
             "name": "Year",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
               }
             ],
+            "dataCategory": "Years",
             "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "3708e7ef-30e0-4f6e-940d-b5dfe5ccb3a4",
-            "sourceColumn": "Year",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "a28a14a6-2507-4315-ac6e-0bcc16765a33",
-        "partitions": [
-          {
-            "name": "Population-d6596cd5-d944-4d3c-9e88-a9e0516c71b6",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Population.xlsx\"), null, true),",
-                "    #\"population (1)_Sheet\" = Source{[Item=\"population (1)\",Kind=\"Sheet\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"population (1)_Sheet\", [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Population\", Int64.Type}})",
-                "in",
-                "    #\"Changed Type\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Sex",
-        "annotations": [
-          {
-            "name": "PBI_QueryRelationships",
-            "value": "{\"columnCount\":1,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Sex/Changed Type1.{Gender,0}\"],\"ColumnCount\":1,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Sex/Changed Type1.{Gender,0}\"],\"RelationshipInfo\":[]}"
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "99882ab1-350c-481c-9f9e-3ce0d8acdae3",
+            "summarizeBy": "none",
+            "type": "calculated"
           },
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Sex",
+            "name": "MonthNo",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "changedProperties": [
+                "value": "User"
+              },
               {
-                "property": "IsHidden"
+                "name": "TemplateId",
+                "value": "MonthNumber"
               }
             ],
-            "dataType": "string",
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
             "isHidden": true,
-            "lineageTag": "1c01512c-20bc-4b4b-8041-8a2b76a58d7a",
-            "sourceColumn": "Sex",
-            "summarizeBy": "none"
+            "lineageTag": "99ad4c22-3bc8-45fb-9edc-f2815801ddbb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "f3112ffa-3b94-447b-8516-6afb2ce4414a",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "981f992d-6644-460b-8710-c37ed13df906",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "f614e29b-fa71-41f8-bd5a-b0ca5f4b332d",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e1b4f03a-acfe-4c51-877d-0ab14f7a2c9b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "3aaf221b-fc7a-4790-a4d4-715272522a8f",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "e1186671-fdaa-4c7f-ad51-4fcaeb9c6f7f",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "573e4b2d-9c72-4013-bd7a-6660d14e99d5",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "c4ed0daf-0138-46fb-9f85-0dc448af15ae",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "ec4e0df8-80ba-45f3-bf8a-470d4f909525"
           }
         ],
         "isHidden": true,
-        "lineageTag": "ae5cdd40-e983-410b-87c7-d2794df5ab1a",
+        "lineageTag": "3d5fd457-457a-4b8e-af6e-15b45222bfdb",
         "partitions": [
           {
-            "name": "Sex-edf84f72-3496-4ee0-95cd-f94bffa15474",
+            "name": "LocalDateTable_021b8805-3ede-4d55-9182-0236ac5e0923-cffa0efb-5dc1-4edf-8831-2f223b7cf220",
             "mode": "import",
             "source": {
-              "expression": [
-                "let",
-                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Sex.xlsx\"), null, true),",
-                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(Sheet1_Sheet,{{\"Column1\", type text}}),",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
-                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Gender\", type text}}),",
-                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type1\",{{\"Gender\", \"Sex\"}})",
-                "in",
-                "    #\"Renamed Columns\""
-              ],
-              "type": "m"
+              "expression": "Calendar(Date(Year(MIN('Year'[Date])), 1, 1), Date(Year(MAX('Year'[Date])), 12, 31))",
+              "type": "calculated"
             }
           }
-        ]
+        ],
+        "showAsVariationsOnly": true
       },
       {
         "name": "Variance Analysis",
@@ -17162,7 +16810,21 @@
         ],
         "columns": [
           {
-            "name": "Country",
+            "name": "Maternal Mortality Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "233aa59b-82c0-4af5-a2dc-088f7b03db28",
+            "sourceColumn": "Maternal Mortality Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Maternal Mortality",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -17170,8 +16832,62 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "4fd16668-f85d-43db-8ce0-b3cb89060495",
-            "sourceColumn": "Country",
+            "lineageTag": "72b3abea-c2f3-4b1c-95ff-8852595a73e1",
+            "sourceColumn": "Maternal Mortality",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Malaria Cases Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "301917c3-43cf-4cd0-8597-bd3cc04e4c50",
+            "sourceColumn": "Malaria Cases Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Malaria Cases",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dc71a694-cd90-47ca-a196-abf2a6670902",
+            "sourceColumn": "Malaria Cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Neonatal Mortality Change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e182baa7-0c0a-49a7-bde2-debe44a38f6d",
+            "sourceColumn": "Neonatal Mortality Change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Neonatal Mortality",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4e92b5c9-eea8-4bf8-aeb5-5ffe451fc9be",
+            "sourceColumn": "Neonatal Mortality",
             "summarizeBy": "none"
           },
           {
@@ -17205,7 +16921,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Hib3 Immunizations",
+            "name": "Pupil Teacher Ratio",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -17213,38 +16929,12 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "f8682544-0deb-4588-93f4-069e7d8900d7",
-            "sourceColumn": "Hib3 Immunizations",
+            "lineageTag": "b5bea0f6-41b6-4454-bda4-4cf20db8f516",
+            "sourceColumn": "Pupil Teacher Ratio",
             "summarizeBy": "none"
           },
           {
-            "name": "Hib3 Immunizations %",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "438bd1cc-fc59-4cee-926f-caf3197d0bf3",
-            "sourceColumn": "Hib3 Immunizations %",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Malaria Cases",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "dc71a694-cd90-47ca-a196-abf2a6670902",
-            "sourceColumn": "Malaria Cases",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Malaria Cases Change",
+            "name": "Pupil Teacher Ratio Change",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -17253,25 +16943,12 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "301917c3-43cf-4cd0-8597-bd3cc04e4c50",
-            "sourceColumn": "Malaria Cases Change",
+            "lineageTag": "8ffd0169-1554-41f1-8caa-19cb5b2c2de7",
+            "sourceColumn": "Pupil Teacher Ratio Change",
             "summarizeBy": "sum"
           },
           {
-            "name": "Maternal Mortality",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "72b3abea-c2f3-4b1c-95ff-8852595a73e1",
-            "sourceColumn": "Maternal Mortality",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Maternal Mortality Change",
+            "name": "Tuberculosis Incidents Change",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -17280,9 +16957,35 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "lineageTag": "233aa59b-82c0-4af5-a2dc-088f7b03db28",
-            "sourceColumn": "Maternal Mortality Change",
+            "lineageTag": "c9e141d1-dae4-4fba-880f-02285ba8037d",
+            "sourceColumn": "Tuberculosis Incidents Change",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Tuberculosis Incidents",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2bf2b8c9-3db0-4e14-81b1-0e8aed57ad5b",
+            "sourceColumn": "Tuberculosis Incidents",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4fd16668-f85d-43db-8ce0-b3cb89060495",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
           },
           {
             "name": "Measles Vaccine",
@@ -17311,7 +17014,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Neonatal Mortality",
+            "name": "Hib3 Immunizations %",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -17319,26 +17022,12 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "4e92b5c9-eea8-4bf8-aeb5-5ffe451fc9be",
-            "sourceColumn": "Neonatal Mortality",
+            "lineageTag": "438bd1cc-fc59-4cee-926f-caf3197d0bf3",
+            "sourceColumn": "Hib3 Immunizations %",
             "summarizeBy": "none"
           },
           {
-            "name": "Neonatal Mortality Change",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "e182baa7-0c0a-49a7-bde2-debe44a38f6d",
-            "sourceColumn": "Neonatal Mortality Change",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Pupil Teacher Ratio",
+            "name": "Hib3 Immunizations",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -17346,50 +17035,9 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "b5bea0f6-41b6-4454-bda4-4cf20db8f516",
-            "sourceColumn": "Pupil Teacher Ratio",
+            "lineageTag": "f8682544-0deb-4588-93f4-069e7d8900d7",
+            "sourceColumn": "Hib3 Immunizations",
             "summarizeBy": "none"
-          },
-          {
-            "name": "Pupil Teacher Ratio Change",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "8ffd0169-1554-41f1-8caa-19cb5b2c2de7",
-            "sourceColumn": "Pupil Teacher Ratio Change",
-            "summarizeBy": "sum"
-          },
-          {
-            "name": "Tuberculosis Incidents",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "2bf2b8c9-3db0-4e14-81b1-0e8aed57ad5b",
-            "sourceColumn": "Tuberculosis Incidents",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Tuberculosis Incidents Change",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "c9e141d1-dae4-4fba-880f-02285ba8037d",
-            "sourceColumn": "Tuberculosis Incidents Change",
-            "summarizeBy": "sum"
           },
           {
             "name": "Water Services",
@@ -17445,12 +17093,8 @@
         ]
       },
       {
-        "name": "Year",
+        "name": "Flags",
         "annotations": [
-          {
-            "name": "PBI_QueryRelationships",
-            "value": "{\"columnCount\":1,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Year/Changed Type.{Year,0}\"],\"ColumnCount\":1,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Year/Changed Type.{Year,0}\"],\"RelationshipInfo\":[]}"
-          },
           {
             "name": "PBI_NavigationStepName",
             "value": "Navigation"
@@ -17462,64 +17106,72 @@
         ],
         "columns": [
           {
-            "name": "Date",
+            "name": "Country Code",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
-              {
-                "name": "UnderlyingDateTimeDataType",
-                "value": "Date"
               }
             ],
-            "dataType": "dateTime",
-            "formatString": "Long Date",
-            "lineageTag": "8691aec3-865c-4eca-94bd-d4260d83160f",
-            "sourceColumn": "Date",
-            "summarizeBy": "none",
-            "variations": [
-              {
-                "name": "Variation",
-                "defaultHierarchy": {
-                  "hierarchy": "Date Hierarchy",
-                  "table": "LocalDateTable_021b8805-3ede-4d55-9182-0236ac5e0923"
-                },
-                "isDefault": true,
-                "relationship": "af7cdcad-c7ce-42fc-88e8-db4ff74e4221"
-              }
-            ]
+            "dataType": "string",
+            "lineageTag": "af6ad719-2065-4dde-94d4-bfdab7569301",
+            "sourceColumn": "Country Code",
+            "summarizeBy": "none"
           },
           {
-            "name": "Year",
+            "name": "Country",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
               }
             ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "5a7a90ad-1f07-4fc3-a345-5ca1c49ccd5a",
-            "sourceColumn": "Year",
+            "dataType": "string",
+            "lineageTag": "2a511b51-f3fe-4910-aebe-b8b4c74753ee",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Images File Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "429f212e-52ca-4559-ab38-7e22696ae98b",
+            "sourceColumn": "Images File Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ImageURL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a9646908-d32e-47c5-8f54-e73e4670545c",
+            "sourceColumn": "ImageURL",
             "summarizeBy": "none"
           }
         ],
-        "lineageTag": "2dd08857-ddd2-47ae-b4f7-616ae54eb678",
+        "lineageTag": "fae08b9e-4b3a-4989-8cc9-8c619104619b",
         "partitions": [
           {
-            "name": "Year-23e82efd-b70c-4cfd-b750-b48b9204417e",
+            "name": "Flags-d6fea5e1-52e1-40ac-a570-cd8b6fe332e4",
             "mode": "import",
             "source": {
               "expression": [
                 "let",
-                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Year.xlsx\"), null, true),",
-                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Year\", Int64.Type}}),",
-                "    #\"Inserted Date\" = Table.AddColumn(#\"Changed Type\", \"Date\", each Date.From(Text.From([Year], \"en-US\")), type date)",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Country_Flags.csv\"),[Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}}),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Promoted Headers\",{\"\"})",
                 "in",
-                "    #\"Inserted Date\""
+                "    #\"Removed Columns\""
               ],
               "type": "m"
             }
@@ -17529,21 +17181,6 @@
       {
         "name": "Years",
         "columns": [
-          {
-            "name": "All",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "expression": "\"all\"",
-            "isDataTypeInferred": true,
-            "lineageTag": "5b682b2a-6415-4e79-a4c9-efcbdb062301",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
           {
             "name": "Years",
             "annotations": [
@@ -17569,6 +17206,21 @@
             "sourceColumn": "[Value]",
             "summarizeBy": "none",
             "type": "calculatedTableColumn"
+          },
+          {
+            "name": "All",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "\"all\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "5b682b2a-6415-4e79-a4c9-efcbdb062301",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "ab7651ea-ea25-4d29-aa82-3903120080d4",
@@ -17582,6 +17234,354 @@
         "partitions": [
           {
             "name": "Years-c641772c-d9bb-48f8-8207-6db7f0ed951e",
+            "mode": "import",
+            "source": {
+              "expression": "GENERATESERIES(1800, 2017, 1)",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Legend",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":6,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Legend/Changed Type.{Metric,0}\",\"Section1/Legend/Changed Type.{Bubble01,1}\",\"Section1/Legend/Changed Type.{Bubble02,2}\",\"Section1/Legend/Changed Type.{Bubble03,3}\",\"Section1/Legend/Changed Type.{Bubble04,4}\",\"Section1/Legend/Changed Type.{Bubble05,5}\"],\"ColumnCount\":6,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Legend/Changed Type.{Metric,0}\",\"Section1/Legend/Changed Type.{Bubble01,1}\",\"Section1/Legend/Changed Type.{Bubble02,2}\",\"Section1/Legend/Changed Type.{Bubble03,3}\",\"Section1/Legend/Changed Type.{Bubble04,4}\",\"Section1/Legend/Changed Type.{Bubble05,5}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Metric",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0439d427-2309-4467-bcfc-c5d9ef898089",
+            "sourceColumn": "Metric",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bubble01",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "334832d1-5da7-453b-aee9-b4af8827f37d",
+            "sourceColumn": "Bubble01",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bubble02",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6b3dad39-de99-4478-bbb8-ba861e26569c",
+            "sourceColumn": "Bubble02",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bubble03",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ae41345c-31b8-4151-bf26-95cca2477596",
+            "sourceColumn": "Bubble03",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bubble04",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b7c7a955-7507-419e-a808-6bc595851903",
+            "sourceColumn": "Bubble04",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Bubble05",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ec512044-7881-49e7-9c21-e1d181445707",
+            "sourceColumn": "Bubble05",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "d32cabf6-336a-4f5b-a12d-d94097be9a05",
+        "partitions": [
+          {
+            "name": "Legend-65f60753-9014-41bd-a4ba-599ebcf69f8e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45W8slMS1VwrShITS5JzEuuVNCITE0sKtZU0lEyNgASJqZAwgzEMgcRFgZKsbEA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Metric = _t, Bubble01 = _t, Bubble02 = _t, Bubble03 = _t, Bubble04 = _t, Bubble05 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Metric\", type text}, {\"Bubble01\", Int64.Type}, {\"Bubble02\", Int64.Type}, {\"Bubble03\", Int64.Type}, {\"Bubble04\", Int64.Type}, {\"Bubble05\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Population",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/population (1)/Changed Type.{Entity,0}\",\"Section1/population (1)/Changed Type.{Code,1}\",\"Section1/population (1)/Changed Type.{Year,2}\",\"Section1/population (1)/Changed Type.{Population,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/population (1)/Changed Type.{Entity,0}\",\"Section1/population (1)/Changed Type.{Code,1}\",\"Section1/population (1)/Changed Type.{Year,2}\",\"Section1/population (1)/Changed Type.{Population,3}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Entity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ba1f125f-10e3-4b8d-9847-5d8f2fe03049",
+            "sourceColumn": "Entity",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1ce35fb4-2717-4c96-8420-3ee966d70e81",
+            "sourceColumn": "Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3708e7ef-30e0-4f6e-940d-b5dfe5ccb3a4",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Population",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "78c2c51e-701c-4751-997a-1585f71065ec",
+            "sourceColumn": "Population",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "a28a14a6-2507-4315-ac6e-0bcc16765a33",
+        "partitions": [
+          {
+            "name": "Population-d6596cd5-d944-4d3c-9e88-a9e0516c71b6",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\Justyna\\OneDrive - Microsoft\\Gartner\\BI Bake Off\\London\\Population.xlsx\"), null, true),",
+                "    #\"population (1)_Sheet\" = Source{[Item=\"population (1)\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"population (1)_Sheet\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Population\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Buckets",
+        "annotations": [
+          {
+            "name": "PBI_QueryRelationships",
+            "value": "{\"columnCount\":4,\"keyColumnNames\":[],\"queryRelationships\":[],\"columnIdentities\":[\"Section1/Buckets/Changed Type.{Bucket,0}\",\"Section1/Buckets/Changed Type.{Category,1}\",\"Section1/Buckets/Changed Type.{Bucket Sort,2}\",\"Section1/Buckets/Changed Type.{Bucket_2,3}\"],\"ColumnCount\":4,\"KeyColumnNames\":[],\"ColumnIdentities\":[\"Section1/Buckets/Changed Type.{Bucket,0}\",\"Section1/Buckets/Changed Type.{Category,1}\",\"Section1/Buckets/Changed Type.{Bucket Sort,2}\",\"Section1/Buckets/Changed Type.{Bucket_2,3}\"],\"RelationshipInfo\":[]}"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Bucket",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "323fe867-0e98-4228-b706-5e5d8e16b56f",
+            "sortByColumn": "Category",
+            "sourceColumn": "Bucket",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7aa7b563-8500-49fb-a454-41a21906d3bf",
+            "sourceColumn": "Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bucket Sort",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "299eb679-e06b-43e3-90e8-4a30f0ef68f7",
+            "sourceColumn": "Bucket Sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bucket_2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a4e19b8f-e5fc-4028-8729-bab1ca95e67e",
+            "sortByColumn": "Bucket Sort",
+            "sourceColumn": "Bucket_2",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "898f55d7-9a76-43c9-8530-32862b68a953",
+        "partitions": [
+          {
+            "name": "Buckets-57fac719-6790-4d47-a1d4-17f80f110e7f",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"PctLDoAwCATQu7AuCVo+epbalfEI3l8okQUkzBvGgOsl6ncnaLDH2nwqm21AJ2T2MCulLEtZUE4P/fRKqeavEmqoxi+XWqoRWqiFSumRuo7nCFtL/0Jkc34=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Bucket = _t, Category = _t, #\"Bucket Sort\" = _t, Bucket_2 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Bucket\", type text}, {\"Category\", Int64.Type}, {\"Bucket Sort\", Int64.Type}, {\"Bucket_2\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Extra Year",
+        "columns": [
+          {
+            "name": "Extra year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "extendedProperties": [
+              {
+                "name": "ParameterMetadata",
+                "type": "json",
+                "value": {
+                  "version": 0
+                }
+              }
+            ],
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "93344145-9253-437c-a9ee-7297e02627c0",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "805f6912-6c51-406f-9351-bdf9c32642ed",
+        "measures": [
+          {
+            "name": "Extra year Value",
+            "expression": "SELECTEDVALUE('Extra Year'[Extra year])",
+            "lineageTag": "8b1b27f5-1ff1-4b9b-83ca-1270a6a4ed3c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Extra Year-ff2f05c6-1996-43f1-8aa8-329d7d354603",
             "mode": "import",
             "source": {
               "expression": "GENERATESERIES(1800, 2017, 1)",
